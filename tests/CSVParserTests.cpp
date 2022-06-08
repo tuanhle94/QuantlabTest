@@ -8,6 +8,11 @@ class ParserTests : public ::testing::Test {};
 
 TEST(ParserTests, ParseInvalidFile)
 {
-	auto result = quantlab::csv_parser::parse("invalid");
-	EXPECT_TRUE(result.empty());
+	EXPECT_THROW(quantlab::csv_parser::parse("invalid"), std::runtime_error);
+}
+
+TEST(ParserTests, ParseValidFile)
+{
+	auto result = quantlab::csv_parser::parse("sample_files/input.csv");
+	EXPECT_FALSE(result.empty());
 }

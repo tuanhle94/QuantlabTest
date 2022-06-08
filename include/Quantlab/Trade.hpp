@@ -10,7 +10,7 @@ namespace quantlab {
 
 	struct QUANTLAB_EXPORT trade {
 		/** @brief Value indicating the microseconds since midnight.. */
-		int timestamp;
+		long long timestamp;
 		/** @brief The 3 character unique identifier for a financial instrument (Stock, future etc.)*/
 		std::string symbol;
 		/** @brief The amount traded */

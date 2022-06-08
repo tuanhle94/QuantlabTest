@@ -11,8 +11,7 @@ namespace quantlab {
 
 	class QUANTLAB_EXPORT csv_parser {
 	public:
-		static std::map<std::string, trade> parse(const std::string& filepath);
-
+		static std::map<std::string, std::vector<trade>> parse(const std::string& filepath);
 	};
 
 
