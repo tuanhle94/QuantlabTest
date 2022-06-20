@@ -3,6 +3,7 @@
 
 #include "Quantlab/Trade.hpp"
 #include "Quantlab/QuantlabExports.h"
+#include <vector>
 
 #include <string>
 #include <map>

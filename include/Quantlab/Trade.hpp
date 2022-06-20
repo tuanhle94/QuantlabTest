@@ -4,7 +4,6 @@
 #include "Quantlab/QuantlabExports.h"
 
 #include <string>
-#include <vector>
 
 namespace quantlab {
 
