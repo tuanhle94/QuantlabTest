@@ -28,7 +28,7 @@ namespace quantlab {
 	{
 		int total_volume = 0;
 
-		for (auto trade : trades)
+		for (const auto& trade : trades)
 		{
 			total_volume = total_volume + trade.quantity;
 		}
@@ -39,7 +39,7 @@ namespace quantlab {
 	{
 		int max_trade_price = 0;
 
-		for (auto trade : trades)
+		for (const auto& trade : trades)
 		{
 			if (trade.price > max_trade_price) {
 				max_trade_price = trade.price;
@@ -54,7 +54,7 @@ namespace quantlab {
 		int numerator = 0;
 		int denominator = 0;
 
-		for (auto trade : trades)
+		for (const auto& trade : trades)
 		{
 			numerator = numerator + trade.quantity * trade.price;
 			denominator = denominator + trade.quantity;
@@ -66,7 +66,7 @@ namespace quantlab {
 	std::map<std::string, result> calculator::calculate_all(const std::map<std::string, std::vector<trade>>& input) {
 		std::map<std::string, result> results;
 
-		for (auto item : input)
+		for (const auto& item : input)
 		{
 			auto symbol = item.first;
 			auto trades = item.second;

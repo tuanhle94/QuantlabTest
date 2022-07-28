@@ -6,7 +6,7 @@ namespace quantlab {
 	{
 		std::ofstream file(filename);
 
-		for (auto result : results)
+		for (const auto &result : results)
 		{
 			file << result.first << ','; // Send the trade symbol to the stream
 			// Send the calculated values to the stream
