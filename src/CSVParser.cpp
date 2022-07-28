@@ -6,9 +6,9 @@
 
 namespace quantlab {
 
-	std::map<std::string, std::vector<trade>> csv_parser::parse(const std::string& filepath)
+	std::unordered_map<std::string, std::vector<trade>> csv_parser::parse(const std::string& filepath)
 	{
-		auto trade_map = std::map<std::string, std::vector<trade>>();
+		auto trade_map = std::unordered_map<std::string, std::vector<trade>>();
 		std::ifstream file(filepath);
 		if (!file.is_open()) {
 			throw std::runtime_error(

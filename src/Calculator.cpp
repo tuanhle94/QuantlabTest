@@ -63,7 +63,7 @@ namespace quantlab {
 	}
 
 
-	std::map<std::string, result> calculator::calculate_all(const std::map<std::string, std::vector<trade>>& input) {
+	std::map<std::string, result> calculator::calculate_all(const std::unordered_map<std::string, std::vector<trade>>& input) {
 		std::map<std::string, result> results;
 
 		for (const auto& item : input)

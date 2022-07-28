@@ -66,7 +66,7 @@ public:
 	}
 
 	std::string input_file = "sample_files/small_input.csv";
-	std::map<std::string, std::vector<quantlab::trade>> trade_map;
+	std::unordered_map<std::string, std::vector<quantlab::trade>> trade_map;
 
 };
 

@@ -6,13 +6,14 @@
 #include <vector>
 
 #include <string>
-#include <map>
+#include <unordered_map>
+
 
 namespace quantlab {
 
 	class QUANTLAB_EXPORT csv_parser {
 	public:
-		static std::map<std::string, std::vector<trade>> parse(const std::string& filepath);
+		static std::unordered_map<std::string, std::vector<trade>> parse(const std::string& filepath);
 	};
 
 
